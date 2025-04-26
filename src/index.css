@@ -152,12 +152,40 @@ code {
   text-decoration: none;
 }
 .header-button:hover{
-  background-color: var(--color-secondary);
+  background-color: transparent;
   color: var(--color-text);
   cursor: pointer;
 }
 
-/* Mobile */
+
+/*main-----------------------------------*/
+.main{
+  display: flex;;
+  height: 100vh;
+  margin: 30px 200px;
+}
+.cards-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-img-top{
+  height: 18rem;
+  object-fit: cover;
+}
+.card-btn{
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+/*------------------------------------------- Mobile -----------------------------------------*/
 @media (max-width: 768px) {
   body {
     margin: 0 0 0 0;
@@ -223,22 +251,22 @@ code {
   }
 
   /*Header*/
-  .header h1{
-    font-size: 40px;
-    margin-top: 10px;
-  }
   .header-left-side{
     margin:20px 0;
     flex: 0;
   }
+  .header h1{
+    font-size: 55px;
+    margin-top: 10px;
+  }
   .header-description{
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 10px;
   }
   .header-description-small{
     width: auto;
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 25px;
   }
   .header-content{
     max-width: none;
