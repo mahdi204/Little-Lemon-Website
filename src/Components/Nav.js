@@ -3,11 +3,11 @@ import React from 'react'
 const Nav = () => {
     return (
         <nav>
-            <div><p>Hi</p></div>
-            <ul>
-                <li className='hover:text-gray-400 cursor-pointer'>Home</li>
-                <li className='hover:text-gray-400 cursor-pointer'>About</li>
-                <li className='hover:text-gray-400 cursor-pointer'>Contact</li>
+            <div><p>Logo</p></div>
+            <ul className='nav-ul'>
+                <li className="home-li"><a href=''>Home</a></li>
+                <li className="about-li"><a href=''>About</a></li>
+                <li className="Contact-li"><a href=''>Contact</a></li>
             </ul>
         </nav>
     )
