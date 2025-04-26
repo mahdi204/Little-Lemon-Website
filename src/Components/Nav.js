@@ -21,8 +21,9 @@ const Nav = () => {
                     </svg>
                 )}
             </div>
-            <div className="logo">Logo</div>
-
+            <div>
+                <img className='logo-image' src="./little-lemon-logo.png" alt="logo" />
+            </div>
             <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
                 <li><a href="">Home</a></li>
                 <li><a href="">Reserve</a></li>

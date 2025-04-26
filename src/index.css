@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Press+Start+2P&family=Roboto+Slab:wght@100..900&display=swap');
+
 :root {
-  --color-primary: #0070f3;
-  --color-secondary: #1a1a1a;
-  --color-background: #f0f0f0;
+  --color-primary: #495e57;   /* Dark green */
+  --color-secondary: #f4ce14; /* Lemon yellow */
+  --color-accent: #ee9972;    /* Light orange */
+  --color-background: #edefee; /* Light grey */
   --color-text: #333333;
-  --color-border: #eaeaea;
+  --color-text-white: #edefee;     /* Dark grey for text */
 }
 
 /* Reset */
@@ -18,6 +22,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--color-background);
+  color:var(--color-text);
 }
 
 code {
@@ -35,10 +40,10 @@ code {
 }
 
 /* Logo */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--color-primary);
+.logo-image {
+  width: 200px;
+  height: 50px;
+  object-fit: cover;
 }
 
 /* Links */
@@ -56,7 +61,7 @@ code {
 
 .nav-links li a:hover {
   background-color: var(--color-primary);
-  color: var(--color-border);
+  color: var(--color-text-white);
 }
 
 /* Burger */
@@ -66,14 +71,91 @@ code {
   cursor: pointer;
 }
 .shop-cart svg {
-  width: 30px;
+  width: 200px;
   height: 30px;
   color: var(--color-text);
+}
+.shop-cart svg:hover {
+  color: var(--color-primary);
+  cursor: pointer ;
 }
 
 
 /*Header --------------------------------------*/
+.header{
+  position: relative;
+  height: 100vh;
+  font-family: "roboto slab";
+}
+.header h1{
+  font-size: 70px;
+  color: var(--color-text-white);
+  text-align: center;
+  margin-top: 20px;
+}
 
+.header-background-image{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover ;
+  z-index: -1;
+  background-color: var(--color-primary);
+}
+.header-image{
+  background-color: var(--color-primary);
+  height: 500px;
+  width: 500px;
+  border: 0px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.header-content{
+  max-width: calc(100% - 400px); /* simulate margin without overflow */
+  display: flex ;
+  align-items: center;
+  margin: 0 200px;
+  height: 100%;
+}
+.header-right-side,
+.header-left-side {
+  flex: 1; /* Each side takes 50% of the space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* or center, depends on your design */
+  padding: 20px;
+}
+.header-right-side {
+ align-items: center;
+  /* Align right side content to the right */
+}
+.header-description{
+  margin-top: 10px;
+  font-size: 30px;
+  color: var(--color-text-white);
+}
+.header-description-small{
+  width: 500px;
+  margin-top: 50px;
+  font-size: 20px;
+  color: var(--color-text-white);
+}
+.header-button{
+  margin-top: 50px;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.header-button:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  cursor: pointer;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -102,6 +184,7 @@ code {
 
   .nav-links.show {
     display: flex;
+    z-index: 1000;
   }
 
   .logo {
@@ -129,5 +212,22 @@ code {
     width: 30px;
     height: 30px;
     color: var(--color-text);
+  }
+  .burger svg:hover {
+    color: var(--color-primary);
+  }
+  .shop-cart svg{
+    width: 30px;
+    height: 30px;
+    color: var(--color-text);
+  }
+
+  /*Header*/
+  .header-content{
+    max-width: none;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
   }
 }
