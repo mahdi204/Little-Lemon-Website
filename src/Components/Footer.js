@@ -1,4 +1,5 @@
 import React from 'react'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
     return (
@@ -22,8 +23,8 @@ const Footer = () => {
                 <div class="container">
                     <div class="row">
                         <div class="footer-col">
-                            <h6><i class="fas fa-gem"></i> Company name</h6>
-                            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <h6><i class="fas fa-gem"></i> Little lemon resturent</h6>
+                            <p>Little Lemon is dedicated to bringing you the finest and most delicious meals, prepared with the freshest ingredients. Our mission is to provide an unforgettable dining experience with every bite, blending traditional flavors with modern twists. Join us on our culinary journey and taste the difference!</p>
                         </div>
 
                         <div class="footer-col">
@@ -54,8 +55,8 @@ const Footer = () => {
             </section>
 
             <div class="footer-bottom">
-                © 2021 Copyright:
-                <a href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © 2025 Copyright:
+                <a href="#">mahdiisaqerr.com</a>
             </div>
         </footer>
 
